@@ -20,7 +20,7 @@ except ImportError:
 import os, sys
 
 def isPython2():
-	if version_major == 2:
+	if version_major == '2':
 		return True
 	else:
 		return False
@@ -102,19 +102,16 @@ class PacktpubToKindle(object):
 		data['op'] = 'Send eBook'
 		data['type'] = 'mobi'
 
-		#url_account = self.config.get('url', 'url.base') +  self.config.get('url', 'url.account')
-		url_account = url_base + url_account;
-		response = self.session.post(url_account, headers=self.headers, data=data);
+		url = url_base + url_account;
+		response = self.session.post(url, headers=self.headers, data=data);
 		printRespCode("Request sending ebooks in kindle format", response)
 
 
 		# Here we can get the notice from content if the book has been successfully sent.
-		# response = self.session.get(url_account, headers=self.headers)
+		# response = self.session.get(url, headers=self.headers)
 
 
 	def claimLatestBook(self):
-		#url_base = self.config.get('url', 'url.base')
-		#url_auth = url_base + self.config.get('url', 'url.login')
 		url_auth = url_base + url_login
 
 		response = self.session.get(url_auth, headers = self.headers)
