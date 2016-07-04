@@ -72,17 +72,17 @@ class PacktpubToKindle(object):
 		nid = div_claimed_book['nid']
 		print(">> Book title : {0}".format(title.string.strip()))
 
-		if isPython2() is True:
-			answer = raw_input(">> Do you want to synchronize it? (y/n)  ");
-		else:
-			answer = input(">> Do you want to synchronize it? (y/n)  ");
+		# if isPython2() is True:
+		# 	answer = raw_input(">> Do you want to synchronize it? (y/n)  ");
+		# else:
+		# 	answer = input(">> Do you want to synchronize it? (y/n)  ");
 
-		answer_low = answer.lower();
-		if answer_low == 'yes' or answer_low == 'y':
-			pass
-		else:
-			print(">> Choose to stop.");
-			return;
+		# answer_low = answer.lower();
+		# if answer_low == 'yes' or answer_low == 'y':
+		# 	pass
+		# else:
+		# 	print(">> Choose to stop.");
+		# 	return;
 		
 
 
